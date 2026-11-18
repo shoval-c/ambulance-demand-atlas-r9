@@ -1,0 +1,252 @@
+{
+  "checked_utc": "2026-11-18T18:14:49.963623+00:00",
+  "h3_r9_cells": {
+    "arlington": 2350,
+    "london": 17339,
+    "new-york": 8338,
+    "paris": 1230,
+    "sioux-falls": 2226,
+    "tel-aviv": 523
+  },
+  "checks": [
+    {
+      "city": "london",
+      "role": "standard",
+      "document_sha256": "2b2bcbc809355c452d25180778e9de4c5787c9cb4e5e8da2f2832d684b38f778",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "london",
+      "role": "performance",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "paris",
+      "role": "standard",
+      "status": "review",
+      "detail": "403 Client Error: Forbidden for url: https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048839351"
+    },
+    {
+      "city": "paris",
+      "role": "corroboration",
+      "status": "review",
+      "detail": "HTTPSConnectionPool(host='affairesjuridiques.aphp.fr', port=443): Max retries exceeded with url: /textes/circulaire-dhos01-n-2004-151-du-29-mars-2004-relative-au-role-des-samu-des-sdis-et-des-ambulanciers-dans-laide-medicale-urgente/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='affairesjuri"
+    },
+    {
+      "city": "arlington",
+      "role": "standard",
+      "document_sha256": "5a80c7e1473069119f1985504439606a805241ffa6c92089c241f205a3021185",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "arlington",
+      "role": "performance",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "sioux-falls",
+      "role": "standard",
+      "document_sha256": "b47e8b0ec5bb0dc183b9acf939de5f872104de54a659a651c7081b1db1a56165",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "new-york",
+      "role": "standard",
+      "document_sha256": "edf9e1934c2e689f139374af538a9f26ea9284299904bed5551a7097642b75c2",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "tel-aviv",
+      "role": "standard",
+      "document_sha256": "d34455171527af909588e18680f6c8cd42cf989b44e673d5b6902be2468542df",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "london",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "london",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "london",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "london",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "london",
+      "role": "timing",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "paris",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "paris",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "paris",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "paris",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "paris",
+      "role": "timing",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "arlington",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "arlington",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "arlington",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "arlington",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "arlington",
+      "role": "timing",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "sioux-falls",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "sioux-falls",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "sioux-falls",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "sioux-falls",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Reproduced 21,825 for the named study year."
+    },
+    {
+      "city": "sioux-falls",
+      "role": "timing",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "new-york",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "new-york",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "new-york",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "new-york",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Reproduced 1,575,273 for the named study year."
+    },
+    {
+      "city": "new-york",
+      "role": "timing",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "tel-aviv",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "tel-aviv",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "tel-aviv",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "tel-aviv",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Source content and configured evidence markers matched."
+    },
+    {
+      "city": "tel-aviv",
+      "role": "timing",
+      "status": "data_gap",
+      "detail": "No observed local EMS time profile in this study."
+    }
+  ]
+}

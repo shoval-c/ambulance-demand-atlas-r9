@@ -1,0 +1,472 @@
+[
+  {
+    "city": "london",
+    "role": "standard",
+    "title": "NHS England · 2026/27 Standard Contract, service conditions",
+    "url": "https://www.england.nhs.uk/wp-content/uploads/2026/01/03-full-length-service-conditions-2627.pdf",
+    "kind": "pdf",
+    "markers": [
+      "Category 1",
+      "7 minutes",
+      "15 minutes",
+      "Category 2",
+      "25 minutes",
+      "40 minutes"
+    ],
+    "finding_en": "The NHS 2026/27 contract sets a seven-minute mean and 15-minute 90th percentile for Category 1; for Category 2 the figures are 25 and 40 minutes. The planning framework aims for an 18-minute Category 2 mean by the end of 2028/29. These are service-level measures.",
+    "finding_he": "בחוזה NHS לשנת 2026/27 נקבעו לקטגוריה 1 ממוצע של 7 דקות ואחוזון 90 של 15 דקות. בקטגוריה 2 הערכים הם 25 ו־40 דקות. יעד התכנון לסוף 2028/29 הוא ממוצע של 18 דקות בקטגוריה 2. המדידה היא ברמת השירות.",
+    "reviewed": "2026-11-18",
+    "reviewed_sha256": "2b2bcbc809355c452d25180778e9de4c5787c9cb4e5e8da2f2832d684b38f778"
+  },
+  {
+    "city": "london",
+    "role": "performance",
+    "title": "NHS England · medium-term planning framework",
+    "url": "https://www.england.nhs.uk/wp-content/uploads/2025/10/medium-term-planning-framework-delivering-change-together-2026-27-to-2028-29.pdf",
+    "kind": "pdf",
+    "markers": [
+      "25 minutes",
+      "18 minutes",
+      "2028/29"
+    ]
+  },
+  {
+    "city": "paris",
+    "role": "standard",
+    "title": "Code de la santé publique · article R6311-2",
+    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048839351",
+    "kind": "html",
+    "markers": [
+      "R6311-2",
+      "dans le délai le plus rapide"
+    ],
+    "finding_en": "French regulation. SAMU must determine and activate the response appropriate to the call as quickly as possible. This article specifies no numerical arrival deadline. The mapped fire-service transports cover a different part of the system.",
+    "finding_he": "תקנה צרפתית מחייבת את מוקד SAMU לקבוע ולהפעיל בהקדם את המענה המתאים לקריאה. הסעיף אינו קובע זמן הגעה מספרי. נתוני הפינוי במפה מתייחסים לשירותי הכבאות.",
+    "reviewed": "2026-11-18"
+  },
+  {
+    "city": "paris",
+    "role": "corroboration",
+    "title": "AP–HP legal affairs · 2004 circular on SAMU and fire-service roles",
+    "url": "https://affairesjuridiques.aphp.fr/textes/circulaire-dhos01-n-2004-151-du-29-mars-2004-relative-au-role-des-samu-des-sdis-et-des-ambulanciers-dans-laide-medicale-urgente/",
+    "kind": "html",
+    "markers": [
+      "régulation des appels",
+      "réponse",
+      "SAMU"
+    ]
+  },
+  {
+    "city": "arlington",
+    "role": "standard",
+    "title": "City of Arlington · Ambulance Service Code §4.05(B)",
+    "url": "https://www.arlingtontx.gov/files/assets/city/v/2/city-secretary/documents/city-code-of-ordinances/ambulance-service-chapter.pdf",
+    "kind": "pdf",
+    "markers": [
+      "Operating Standards",
+      "no fewer than two"
+    ],
+    "finding_en": "The city code sets a minimum of two people per ambulance. This regulates crew size on a vehicle. The separate FY2026 budget lists a five-minute fire-department EMS response objective. An ambulance-provider arrival percentile was not verified.",
+    "finding_he": "הקוד העירוני קובע מינימום של שני אנשי צוות באמבולנס. תקציב שנת הכספים 2026 מציין בנפרד יעד תגובה של חמש דקות לשירותי רפואת החירום של הכבאות. אחוזון הגעה מחייב של מפעיל האמבולנסים לא אומת.",
+    "reviewed": "2026-11-18",
+    "reviewed_sha256": "5a80c7e1473069119f1985504439606a805241ffa6c92089c241f205a3021185"
+  },
+  {
+    "city": "arlington",
+    "role": "performance",
+    "title": "City of Arlington · FY2026 budget, EMS response time",
+    "url": "https://citybudgets.tarrantcounty.com/flipbook/CityBudgets/2026/Arlington/files/basic-html/page153.html",
+    "kind": "html",
+    "markers": [
+      "Emergency Medical Service",
+      "300 seconds"
+    ]
+  },
+  {
+    "city": "sioux-falls",
+    "role": "standard",
+    "title": "City of Sioux Falls · contractual ambulance response times",
+    "url": "https://www.siouxfalls.gov/health-safety/fire/about/operations/ems-sf/amb-response-times",
+    "kind": "html",
+    "markers": [
+      "90%",
+      "8 minutes, 59 seconds",
+      "11 minutes and 59 seconds",
+      "15 minutes and 59 seconds"
+    ],
+    "finding_en": "The ambulance contract sets a 90% threshold at each priority: P1 within 8:59, P2 within 11:59 and P3 within 15:59. The clock starts when the ambulance has the necessary dispatch information and stops at scene arrival. Contract exceptions apply.",
+    "finding_he": "החוזה קובע הגעה ב־90% מהקריאות בכל דרגה: עד 8:59 דקות בדרגה 1, עד 11:59 בדרגה 2 ועד 15:59 בדרגה 3. המדידה מתחילה בקבלת פרטי ההזנקה הדרושים ומסתיימת בהגעה לזירה. החוזה מגדיר חריגים.",
+    "reviewed": "2026-11-18",
+    "reviewed_sha256": "b47e8b0ec5bb0dc183b9acf939de5f872104de54a659a651c7081b1db1a56165"
+  },
+  {
+    "city": "new-york",
+    "role": "standard",
+    "title": "New York City Administrative Code §15-129 · Ariel Russo Response Time Reporting Act",
+    "url": "https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-25711",
+    "kind": "html",
+    "markers": [
+      "Ariel Russo",
+      "911 operator",
+      "arrives on scene"
+    ],
+    "finding_en": "Local Law 119 requires reporting the interval from the 911 call through emergency-unit arrival. It establishes how response times are reported. This source gives no ambulance-arrival deadline.",
+    "finding_he": "חוק מקומי 119 מחייב דיווח על הזמן מהחיוג ל־911 ועד הגעת יחידת החירום. המקור מפרט כיצד מדווחים על זמני תגובה ואינו מציין מועד אחרון להגעת אמבולנס.",
+    "reviewed": "2026-11-18",
+    "reviewed_sha256": "edf9e1934c2e689f139374af538a9f26ea9284299904bed5551a7097642b75c2"
+  },
+  {
+    "city": "tel-aviv",
+    "role": "standard",
+    "title": "Israel State Comptroller · MDA audit, 2019",
+    "url": "https://library.mevaker.gov.il/sites/DigitalLibrary/Documents/69b/2019-69b-211-Mada.pdf",
+    "kind": "pdf",
+    "markers": [
+      "1990",
+      "2015"
+    ],
+    "finding_en": "Historical national audit. The State Comptroller described earlier response-time benchmarks and called for updated criteria. A current binding numerical target specific to Tel Aviv–Yafo remains unverified.",
+    "finding_he": "דוח מבקר המדינה משנת 2019 סוקר יעדי הגעה היסטוריים וממליץ לעדכן את המדדים. לא אומת יעד זמן מספרי מחייב ועדכני לתל אביב–יפו.",
+    "reviewed": "2026-11-18",
+    "reviewed_sha256": "d34455171527af909588e18680f6c8cd42cf989b44e673d5b6902be2468542df"
+  },
+  {
+    "city": "london",
+    "role": "workload",
+    "title": "London Ambulance Service NHS Trust · 2024/25 Annual Report, Category 1–4 response-time incident counts",
+    "url": "https://www.londonambulance.nhs.uk/download/41281/?tmstv=1775189130",
+    "kind": "pdf",
+    "markers": [
+      "165738",
+      "675431",
+      "175183",
+      "10354"
+    ],
+    "probe": "https://www.londonambulance.nhs.uk/download/41281/",
+    "compact": true,
+    "pages": [
+      25
+    ]
+  },
+  {
+    "city": "london",
+    "role": "boundary",
+    "title": "GLA and ONS · London statistical boundaries, 2021 MSOAs",
+    "url": "https://data.london.gov.uk/dataset/statistical-gis-boundary-files-for-london-20od9",
+    "kind": "html",
+    "markers": [
+      "Statistical GIS Boundary Files"
+    ]
+  },
+  {
+    "city": "london",
+    "role": "residents",
+    "title": "ONS Census 2021 · TS007A usual residents by age",
+    "url": "https://www.nomisweb.co.uk/datasets/c2021ts007a",
+    "kind": "html",
+    "markers": [
+      "Age",
+      "2021"
+    ]
+  },
+  {
+    "city": "london",
+    "role": "activity",
+    "title": "ONS Census 2021 · WP001 workplace population",
+    "url": "https://www.nomisweb.co.uk/sources/census_2021_wp",
+    "kind": "html",
+    "markers": [
+      "Workplace",
+      "2021"
+    ]
+  },
+  {
+    "city": "london",
+    "role": "timing",
+    "title": "London Ambulance Service and GLA · 2008/09 weekly incident pattern and borough totals, tables 9.26–9.27",
+    "url": "https://data.london.gov.uk/dataset/focus-on-london-2000-2009-exp7p",
+    "kind": "html",
+    "markers": [
+      "Focus on London",
+      "2009"
+    ]
+  },
+  {
+    "city": "paris",
+    "role": "workload",
+    "title": "ORSNP Île-de-France and participating fire services, 2023, pages 5–7. Département of intervention and time-of-day chart",
+    "url": "https://orsnp-idf.fr/wp-content/uploads/2025/06/Rapport-annuel-pompiers-2023-VF-.pdf",
+    "kind": "pdf",
+    "markers": [
+      "142565"
+    ],
+    "pages": [
+      4
+    ],
+    "compact": true
+  },
+  {
+    "city": "paris",
+    "role": "boundary",
+    "title": "Ville de Paris, 20 municipal arrondissement boundaries",
+    "url": "https://opendata.paris.fr/explore/dataset/arrondissements/",
+    "kind": "json",
+    "markers": [
+      "Arrondissements"
+    ],
+    "probe": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/arrondissements",
+    "json_key": "dataset_id"
+  },
+  {
+    "city": "paris",
+    "role": "residents",
+    "title": "APUR, INSEE 2021 population and age by IRIS. Table iris_2021_population",
+    "url": "https://carto2.apur.org/apur/rest/services/OPENDATA/RECENSEMENT_IRIS/MapServer/5",
+    "kind": "arc",
+    "markers": [
+      "IRIS"
+    ]
+  },
+  {
+    "city": "paris",
+    "role": "activity",
+    "title": "INSEE, 2022 census, workplace employment (EMP4) by municipal arrondissement",
+    "url": "https://www.insee.fr/fr/statistiques/8581559",
+    "kind": "html",
+    "markers": [
+      "2022",
+      "emploi"
+    ]
+  },
+  {
+    "city": "paris",
+    "role": "timing",
+    "title": "ORSNP Île-de-France and participating fire services, 2023, pages 5–7. Département of intervention and time-of-day chart",
+    "url": "https://orsnp-idf.fr/wp-content/uploads/2025/06/Rapport-annuel-pompiers-2023-VF-.pdf",
+    "kind": "pdf",
+    "markers": [
+      "Paris"
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "city": "arlington",
+    "role": "boundary",
+    "title": "U.S. Census Bureau TIGERweb Census 2020 incorporated-place boundaries",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/26",
+    "kind": "arc",
+    "markers": [
+      "place"
+    ]
+  },
+  {
+    "city": "arlington",
+    "role": "residents",
+    "title": "U.S. Census Bureau TIGERweb 2020 blocks and POP100",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/10",
+    "kind": "arc",
+    "markers": [
+      "POP100"
+    ]
+  },
+  {
+    "city": "arlington",
+    "role": "activity",
+    "title": "U.S. Census Bureau LEHD LODES 2023 workplace jobs, all job types (C000)",
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/tx/wac/tx_wac_S000_JT00_2023.csv.gz",
+    "kind": "gzip_csv",
+    "markers": [
+      "w_geocode",
+      "C000"
+    ]
+  },
+  {
+    "city": "arlington",
+    "role": "workload",
+    "title": "City of Arlington Fire Department FY2025 annual report",
+    "url": "https://www.arlingtontx.gov/News-Articles/2026/May/Arlington-Fire-Department-Publishes-Fiscal-Year-2025-Annual-Report",
+    "kind": "html",
+    "markers": [
+      "59,836",
+      "EMS ambulance calls"
+    ]
+  },
+  {
+    "city": "arlington",
+    "role": "timing",
+    "title": "Arlington Fire Department · historical fire incident data",
+    "url": "https://gis2.arlingtontx.gov/agsext2/rest/services/Fire/Fire/MapServer/3",
+    "kind": "arc",
+    "markers": [
+      "Incident"
+    ]
+  },
+  {
+    "city": "sioux-falls",
+    "role": "boundary",
+    "title": "U.S. Census Bureau TIGERweb Census 2020 incorporated-place boundaries",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/26",
+    "kind": "arc",
+    "markers": [
+      "place"
+    ]
+  },
+  {
+    "city": "sioux-falls",
+    "role": "residents",
+    "title": "U.S. Census Bureau TIGERweb 2020 blocks and POP100",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/10",
+    "kind": "arc",
+    "markers": [
+      "POP100"
+    ]
+  },
+  {
+    "city": "sioux-falls",
+    "role": "activity",
+    "title": "U.S. Census Bureau LEHD LODES 2023 workplace jobs, all job types (C000)",
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/sd/wac/sd_wac_S000_JT00_2023.csv.gz",
+    "kind": "gzip_csv",
+    "markers": [
+      "w_geocode",
+      "C000"
+    ]
+  },
+  {
+    "city": "sioux-falls",
+    "role": "workload",
+    "title": "City of Sioux Falls, monthly ambulance response-time reports (all twelve months of 2025)",
+    "url": "https://www.siouxfalls.gov/health-safety/fire/about/operations/ems-sf/amb-response-times",
+    "kind": "monthly",
+    "markers": [],
+    "expected": 21825
+  },
+  {
+    "city": "sioux-falls",
+    "role": "timing",
+    "title": "Sioux Falls EMS System Assessment · March 2025, hourly pattern, p. 11",
+    "url": "https://www.siouxfalls.gov/files/assets/public/v/1/fire-rescue/fire-ems-rescue/final-ems-system-assessment.pdf#page=12",
+    "kind": "pdf",
+    "markers": [
+      "EMS"
+    ],
+    "pages": [
+      0,
+      11
+    ]
+  },
+  {
+    "city": "new-york",
+    "role": "boundary",
+    "title": "NYC Department of City Planning, shoreline-clipped 2020 census tracts",
+    "url": "https://data.cityofnewyork.us/City-Government/2020-Census-Tracts/63ge-mke6",
+    "kind": "json",
+    "markers": [
+      "2020 Census Tracts"
+    ],
+    "probe": "https://data.cityofnewyork.us/api/views/63ge-mke6",
+    "json_key": "name"
+  },
+  {
+    "city": "new-york",
+    "role": "residents",
+    "title": "U.S. Census Bureau TIGERweb Census 2020 tract population, POP100",
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2020/MapServer/6",
+    "kind": "arc",
+    "markers": [
+      "POP100"
+    ]
+  },
+  {
+    "city": "new-york",
+    "role": "activity",
+    "title": "U.S. Census Bureau LEHD LODES 2023 workplace jobs, all job types (C000)",
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/ny/wac/ny_wac_S000_JT00_2023.csv.gz",
+    "kind": "gzip_csv",
+    "markers": [
+      "w_geocode",
+      "C000"
+    ]
+  },
+  {
+    "city": "new-york",
+    "role": "workload",
+    "title": "FDNY · EMS Incident Dispatch Data",
+    "url": "https://data.cityofnewyork.us/Public-Safety/EMS-Incident-Dispatch-Data/76xm-jjuj",
+    "kind": "count",
+    "markers": [],
+    "probe": "https://data.cityofnewyork.us/resource/76xm-jjuj.json?%24select=count%28%2A%29+AS+n&%24where=incident_datetime+%3E%3D+%272025-01-01%27+AND+incident_datetime+%3C+%272026-01-01%27+AND+first_assignment_datetime+IS+NOT+NULL",
+    "expected": 1575273
+  },
+  {
+    "city": "new-york",
+    "role": "timing",
+    "title": "FDNY · EMS Incident Dispatch Data",
+    "url": "https://data.cityofnewyork.us/Public-Safety/EMS-Incident-Dispatch-Data/76xm-jjuj",
+    "kind": "json",
+    "markers": [
+      "incident_datetime",
+      "first_assignment_datetime",
+      "policeprecinct"
+    ],
+    "probe": "https://data.cityofnewyork.us/api/views/76xm-jjuj",
+    "json_key": "columns"
+  },
+  {
+    "city": "tel-aviv",
+    "role": "workload",
+    "title": "Magen David Adom · 2024 report, Dan table, p. 9",
+    "url": "https://www.mdais.org/media/5356/sicum-shana-2024.pdf",
+    "kind": "pdf",
+    "markers": [
+      "96,232",
+      "28,175",
+      "1,793",
+      "711"
+    ],
+    "pages": [
+      8
+    ],
+    "compact": true
+  },
+  {
+    "city": "tel-aviv",
+    "role": "boundary",
+    "title": "Tel Aviv–Yafo municipal GIS · statistical areas",
+    "url": "https://gisn.tel-aviv.gov.il/arcgis/rest/services/IView2/MapServer/512",
+    "kind": "arc",
+    "markers": [
+      "אזורים סטטיסטיים"
+    ]
+  },
+  {
+    "city": "tel-aviv",
+    "role": "residents",
+    "title": "Israel Central Bureau of Statistics · census",
+    "url": "https://www.cbs.gov.il/en/Surveys/Pages/Population-Census.aspx",
+    "kind": "html",
+    "markers": [
+      "Population Census"
+    ]
+  },
+  {
+    "city": "tel-aviv",
+    "role": "activity",
+    "title": "Tel Aviv–Yafo municipal GIS · buildings",
+    "url": "https://gisn.tel-aviv.gov.il/arcgis/rest/services/IView2/MapServer/513",
+    "kind": "arc",
+    "markers": [
+      "מבנים"
+    ]
+  },
+  {
+    "city": "tel-aviv",
+    "role": "timing",
+    "title": "MDA city total only · equal citywide hourly rate assumed in all three periods",
+    "url": "",
+    "kind": "gap",
+    "markers": []
+  }
+]
