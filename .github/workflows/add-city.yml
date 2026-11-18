@@ -1,0 +1,68 @@
+name: Add a city
+on:
+  workflow_dispatch:
+    inputs:
+      city:
+        description: City and jurisdiction (e.g. Ballarat, Victoria, Australia)
+        required: true
+        type: string
+      mode:
+        description: Publish to the public atlas or verify only
+        required: true
+        type: choice
+        options: [Publish, Preview]
+permissions: {}
+jobs:
+  city:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r onboarding/requirements.txt
+      - name: Verify sources and generate this city
+        id: city
+        env:
+          ATLAS_CITY: ${{ inputs.city }}
+          ATLAS_MODE: ${{ inputs.mode }}
+        run: python onboarding/dispatch.py
+      - name: Publish the verified addition
+        if: inputs.mode == 'Publish' && steps.city.outputs.added == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/ cities.js index.html atlas.html tel-aviv.html audit/ ambulance-atlas-csv.zip
+          git commit -m "Publish verified H3 city $CITY_SLUG"
+          git push origin HEAD:main
+        env:
+          CITY_SLUG: ${{ steps.city.outputs.slug }}
+      - name: Build GitHub Pages from the committed revision
+        if: inputs.mode == 'Publish'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.repos.requestPagesBuild(context.repo);
+      - name: Verify live files and return links
+        if: inputs.mode == 'Publish'
+        env:
+          SLUG: ${{ steps.city.outputs.slug }}
+        run: |
+          PYTHONPATH=onboarding python - <<'PY'
+          import os
+          from pathlib import Path
+          from city import BASE,public_check,run
+          slug=os.environ['SLUG']
+          public_check(Path.cwd(),slug,run('git','rev-parse','HEAD'))
+          url='tel-aviv.html?lang=en' if slug=='tel-aviv' else 'atlas.html?city='+slug+'&lang=en'
+          csv='tel-aviv-h3-ambulance-full.csv' if slug=='tel-aviv' else 'data/'+slug+'.csv'
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              print(f'[Public map]({BASE}{url}) · [Full city CSV]({BASE}{csv})',file=f)
+          PY

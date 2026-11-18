@@ -60,7 +60,7 @@ def public_check(root,slug,revision):
         time.sleep(8)
     raise RuntimeError('Pages deployment pending or contents differ: '+', '.join(pending))
 
-def job(city,dry,extra_profile=None):
+def job(city,dry,extra_profile=None,discover_sources=True):
     with tempfile.TemporaryDirectory(prefix='h3-city-') as t:
         stage=Path(t)/'build';checkout=Path(t)/'atlas'
         run('git','clone','--quiet','--depth=1','--branch','main',REMOTE,checkout)
@@ -74,7 +74,13 @@ def job(city,dry,extra_profile=None):
             if extra_profile:
                 profile=json.loads(extra_profile.read_text())
                 require(norm(city) in [norm(v) for v in profile['aliases']],'Profile does not match requested city')
-            else:profile=resolve(city)
+            else:
+                try:profile=resolve(city)
+                except NeedsResearch:
+                    if not discover_sources:raise
+                    from research import discover
+                    profile=discover(city)
+                    extra_profile=True
             slug=profile['slug']
             if not (checkout/'audit/cities'/f'{slug}.json').exists():
                 model,proof=generate(profile,stage)
@@ -97,7 +103,7 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     mode=ap.add_mutually_exclusive_group(required=True)
     mode.add_argument('--city');mode.add_argument('--queue',action='store_true');mode.add_argument('--issue',type=int)
-    ap.add_argument('--publish',action='store_true');ap.add_argument('--profile',type=Path)
+    ap.add_argument('--publish',action='store_true');ap.add_argument('--profile',type=Path);ap.add_argument('--known-only',action='store_true',help='Skip one-time research for unknown jurisdictions')
     args=ap.parse_args()
     if args.queue:
         print(json.dumps([dict(number=i['number'],city=c,updated_at=i['updated_at']) for i,c in listed()],ensure_ascii=False));return
@@ -106,7 +112,7 @@ def main():
         require(match is not None,'No matching open, owner-submitted city request')
         issue,city=match
     else:city=args.city
-    result=job(city,not args.publish,args.profile)
+    result=job(city,not args.publish,args.profile,not args.known_only)
     if args.issue and args.publish:
         # Guard against a request edited while the build/deployment was in progress.
         current=api(f'issues/{issue["number"]}')

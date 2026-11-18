@@ -8,4 +8,4 @@ Download [all city CSVs](https://shoval-c.github.io/ambulance-demand-atlas-r9/am
 
 ## Add a city
 
-[Enter a city and its jurisdiction](https://github.com/shoval-c/ambulance-demand-atlas-r9/issues/new?template=add-city.yml). Owner-submitted requests go into the hourly Codex queue. The request receives a map and CSV link after verification on the public site. Requests that need additional evidence stay open with the missing sources identified. [How the workflow runs](onboarding/RESEARCH.md).
+[Run the on-demand city builder](https://github.com/shoval-c/ambulance-demand-atlas-r9/actions/workflows/add-city.yml). Select **Run workflow**, enter the city and jurisdiction, then choose **Publish** or **Preview**. Repository write access is required. Victorian councils and saved source profiles run in GitHub. For a new jurisdiction, the [one-time local runner](onboarding/RESEARCH.md) researches official sources using the signed-in Codex CLI, verifies the evidence, and publishes verified results to this same site. Each submission authorizes one city.

@@ -1,15 +1,15 @@
 # City requests
 
-The atlas accepts a city and jurisdiction in its [GitHub form](https://github.com/shoval-c/ambulance-demand-atlas-r9/issues/new?template=add-city.yml). The queue processes requests from the repository owner. Use the GitHub identity already signed in for this atlas. No keys are entered in the form. Requests and published outputs are public.
+Sign into GitHub with write access to the atlas and open [Add a city](https://github.com/shoval-c/ambulance-demand-atlas-r9/actions/workflows/add-city.yml). Choose **Run workflow**, enter the municipality and jurisdiction and select **Publish** or **Preview**. This works with the Victoria connector and saved city profiles. The Actions run summary contains the result. There is no recurring publisher.
 
-The Codex desktop queue runs hourly. It reads the city field as a place name, researches evidence, and runs the builder. Allow the local Codex environment access to the internet and its existing GitHub sign-in. For a direct run in a current checkout, install the pinned Python dependencies in a virtual environment and use:
+For a first-time jurisdiction, use the one-time local command from a current checkout. It uses the existing signed-in Codex CLI for web research and the GitHub sign-in to publish. It verifies the returned profile against live public sources before writing to the site. A city with unclear boundaries or inadequate sources returns a research finding and leaves the atlas untouched. Use the same command for any jurisdiction:
 
 ```sh
 python -m pip install -r onboarding/requirements.txt
-python onboarding/city.py --queue
-python onboarding/city.py --city "Ballarat, Victoria, Australia"
-python onboarding/city.py --issue 1 --publish
+python onboarding/city.py --city "Municipality, region, country" --publish
 ```
+
+You may also capture a request in the [GitHub issue form](https://github.com/shoval-c/ambulance-demand-atlas-r9/issues/new?template=add-city.yml) and explicitly run `python onboarding/city.py --issue NUMBER --publish`. The issue form alone records the city without starting a job.
 
 Without `--publish` the builder fetches and verifies data in a temporary checkout. With it, a single non-forced commit updates navigation, the map, all city CSV downloads, the city comparison, and the source audit. The issue stays open until the deployed bytes match. Rerunning a successful city is idempotent. A competing push fails cleanly and can be retried against the latest main branch.
 
