@@ -2,6 +2,8 @@
 import csv
 import hashlib
 import io
+import ipaddress
+import socket
 import json
 import logging
 import re
@@ -19,6 +21,7 @@ from shapely.geometry import shape
 
 ROOT = Path(__file__).resolve().parents[1]
 SESSION = requests.Session()
+SESSION.trust_env=False  # Public evidence must never use machine or repository credentials.
 SESSION.mount('https://', HTTPAdapter(max_retries=Retry(total=2,backoff_factor=1,status_forcelist=[429,502,503,504],respect_retry_after_header=False)))
 logging.getLogger('pypdf').setLevel(logging.ERROR)
 VIC_REPORT = 'https://www.ambulance.vic.gov.au/sites/default/files/2026-09/2025-26-Q4-Ambulance-Response-Quarter-4-FY2025-26.pdf'
@@ -36,10 +39,19 @@ def bi(en, he):return {'en':en, 'he':he}
 
 @lru_cache(maxsize=24)
 def body(url):
-    parts=urlsplit(url)
-    require(parts.scheme=='https' and parts.hostname and not parts.username,'Expected a public HTTPS source')
-    response=SESSION.get(url,timeout=(15,90)); response.raise_for_status()
-    return response.content
+    for hop in range(6):
+        parts=urlsplit(url)
+        require(parts.scheme=='https' and parts.hostname and not parts.username and not parts.password and parts.port in (None,443),'Expected a public HTTPS source')
+        addresses=socket.getaddrinfo(parts.hostname,443,type=socket.SOCK_STREAM)
+        require(addresses and all(ipaddress.ip_address(a[4][0]).is_global for a in addresses),'Source must resolve to a public address')
+        response=SESSION.get(url,timeout=(15,90),allow_redirects=False)
+        if response.is_redirect:
+            url=urljoin(url,response.headers['Location'])
+            continue
+        response.raise_for_status()
+        return response.content
+    raise NeedsResearch('Too many source redirects')
+
 
 def norm(text):
     return ' '.join(unescape(text).casefold().split())

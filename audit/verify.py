@@ -125,12 +125,13 @@ if __name__=='__main__':
         import tempfile
         sys.path.insert(0,str(HERE.parent/'onboarding'))
         from build import generate
+        from compare import same_csv
         for record in city_reports:
             original=json.loads(record.read_text());profile=original['profile'];slug=profile['slug']
             with tempfile.TemporaryDirectory() as folder:
                 try:
                     model,proof=generate(profile,folder)
-                    if (Path(folder)/(slug+'.csv')).read_bytes()!=(HERE.parent/'data'/(slug+'.csv')).read_bytes():
+                    if not same_csv(Path(folder)/(slug+'.csv'),HERE.parent/'data'/(slug+'.csv')):
                         raise ValueError('Regenerated CSV differs from the published file')
                     grids[slug]=model['count']
                     for role in sorted(EXPECTED_ROLES):

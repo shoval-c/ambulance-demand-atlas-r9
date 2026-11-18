@@ -7,6 +7,7 @@ import tempfile
 from city import ALIASES, BASE, public_check, run
 from evidence import ROOT, NeedsResearch, norm, resolve
 from build import generate
+from compare import same_csv
 from integrate import integrate
 
 def note(text):
@@ -26,7 +27,7 @@ def main():
         with tempfile.TemporaryDirectory() as tmp:
             stage=Path(tmp);model,proof=generate(profile,stage)
             if (ROOT/'data'/f'{slug}.csv').exists():
-                if (stage/f'{slug}.csv').read_bytes()!=(ROOT/'data'/f'{slug}.csv').read_bytes():
+                if not same_csv(stage/f'{slug}.csv',ROOT/'data'/f'{slug}.csv'):
                     raise NeedsResearch('Published city changed. Review the difference before replacing it.')
             else:integrate(ROOT,stage,profile,model,proof);added=True
             note(f"Verified {model['count']:,} H3 R9 cells, {3*model['count']:,} rows and {proof['annual']:,} annual workload records.")
@@ -38,5 +39,6 @@ def main():
 if __name__=='__main__':
     try:main()
     except NeedsResearch as e:
+        print('Source review required:',str(e))
         note('### Source review required\n'+str(e)+'\n\nFor a first-time jurisdiction, submit this same city to the [one-time research runner](../../blob/main/onboarding/RESEARCH.md). It researches primary sources and validates them before publishing.')
         raise SystemExit(2)
