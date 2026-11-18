@@ -1,0 +1,12 @@
+name: Add a city to the H3 atlas
+description: Verify local sources, build the map, and publish its complete CSV.
+title: "[City] "
+body:
+  - type: input
+    id: city
+    attributes:
+      label: City and jurisdiction
+      description: Use the municipality and state, province or country. For a metro area, say so explicitly.
+      placeholder: City of Melbourne, Victoria, Australia
+    validations:
+      required: true

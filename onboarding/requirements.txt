@@ -1,0 +1,8 @@
+requests==2.34.1
+pypdf==7.1.1
+h3==4.1.2
+numpy==2.5.5
+rasterio==1.5.2
+pyproj==3.8.0
+shapely==2.2.0
+astral==3.2

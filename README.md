@@ -4,4 +4,8 @@ Explore the [public English and Hebrew map](https://shoval-c.github.io/ambulance
 
 Review [city standards and source checks](https://shoval-c.github.io/ambulance-demand-atlas-r9/audit/). To rerun the verification from a checkout, install Python dependencies with `python -m pip install h3==4.1.2 requests==2.34.1 pypdf==7.1.1` and run `python audit/verify.py`. The command writes a fresh results JSON and signals when a source needs review.
 
-Download [all six city CSVs](https://shoval-c.github.io/ambulance-demand-atlas-r9/ambulance-atlas-csv.zip). The archive includes city-specific sources, measurement units and assumptions. Coverage areas overlap and their crew counts cannot be summed into a fleet size. Staffing estimates have not been validated against actual travel times or crew availability.
+Download [all city CSVs](https://shoval-c.github.io/ambulance-demand-atlas-r9/ambulance-atlas-csv.zip). The archive includes city-specific sources, measurement units and assumptions. Coverage areas overlap and their crew counts cannot be summed into a fleet size. Staffing estimates have not been validated against actual travel times or crew availability.
+
+## Add a city
+
+[Enter a city and its jurisdiction](https://github.com/shoval-c/ambulance-demand-atlas-r9/issues/new?template=add-city.yml). Owner-submitted requests go into the hourly Codex queue. The request receives a map and CSV link after verification on the public site. Requests that need additional evidence stay open with the missing sources identified. [How the workflow runs](onboarding/RESEARCH.md).

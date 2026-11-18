@@ -1,0 +1,1 @@
+window.atlasCities = {"tel-aviv": ["Tel Aviv–Yafo", "תל אביב–יפו"], "london": ["London", "לונדון"], "paris": ["Paris", "פריז"], "arlington": ["Arlington, TX", "ארלינגטון, טקסס"], "sioux-falls": ["Sioux Falls", "סו פולס"], "new-york": ["New York City", "ניו יורק"]};

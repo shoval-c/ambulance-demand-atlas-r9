@@ -119,6 +119,25 @@ if __name__=='__main__':
     grids={city:inspect_grid(city) for city in cities}
     with ThreadPoolExecutor(max_workers=8) as pool:
         checks=list(pool.map(inspect_source,REGISTRY))
+    # Added cities carry their verified profile. Reproduce the CSV from public inputs.
+    city_reports=sorted((HERE/'cities').glob('*.json'))
+    if city_reports:
+        import tempfile
+        sys.path.insert(0,str(HERE.parent/'onboarding'))
+        from build import generate
+        for record in city_reports:
+            original=json.loads(record.read_text());profile=original['profile'];slug=profile['slug']
+            with tempfile.TemporaryDirectory() as folder:
+                try:
+                    model,proof=generate(profile,folder)
+                    if (Path(folder)/(slug+'.csv')).read_bytes()!=(HERE.parent/'data'/(slug+'.csv')).read_bytes():
+                        raise ValueError('Regenerated CSV differs from the published file')
+                    grids[slug]=model['count']
+                    for role in sorted(EXPECTED_ROLES):
+                        gap=role=='timing' and not profile.get('timing')
+                        checks.append(dict(city=slug,role=role,status='data_gap' if gap else 'passed',detail='Equal hourly citywide rate assumed.' if gap else 'Sources reverified and full CSV reproduced.'))
+                except Exception as exc:
+                    checks.append(dict(city=slug,role='onboarding',status='review',detail=str(exc)[:300]))
     result={'checked_utc':datetime.now(timezone.utc).isoformat(),'h3_r9_cells':grids,'checks':checks}
     (HERE/'results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     for c in checks:print(c['city'],c['role'],c['status'],c['detail'],flush=True)
