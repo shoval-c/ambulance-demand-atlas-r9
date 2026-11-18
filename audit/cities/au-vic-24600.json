@@ -1,0 +1,93 @@
+{
+  "profile": {
+    "slug": "au-vic-24600",
+    "aliases": [
+      "Melbourne, Victoria, Australia"
+    ],
+    "city": {
+      "en": "Melbourne (city council)",
+      "he": "מלבורן (רשות מקומית)"
+    },
+    "scope": {
+      "en": "Victorian local government area of Melbourne",
+      "he": "תחום הרשות המקומית מלבורן"
+    },
+    "boundary": {
+      "title": "Australian Bureau of Statistics · 2025 local government areas",
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2025/LGA/MapServer/0/query?where=STATE_NAME_2021+%3D+%27Victoria%27+AND+UPPER%28LGA_NAME_2025%29+%3D+%27MELBOURNE%27&outFields=LGA_CODE_2025%2CLGA_NAME_2025%2CSTATE_NAME_2021&returnGeometry=true&outSR=4326&f=geojson",
+      "field": "LGA_NAME_2025",
+      "value": "Melbourne"
+    },
+    "workload": {
+      "title": "Ambulance Victoria · FY2025/26 Q4, LGA Code 1 and Code 2 tables",
+      "url": "https://www.ambulance.vic.gov.au/sites/default/files/2026-09/2025-26-Q4-Ambulance-Response-Quarter-4-FY2025-26.pdf",
+      "format": "victoria",
+      "name": "Melbourne",
+      "start": "2025-07-01",
+      "end": "2026-07-01",
+      "unit": {
+        "en": "Code 1 and Code 2 incidents included in response reporting",
+        "he": "אירועים בדרגות 1 ו־2 שנכללו בדיווח זמני התגובה"
+      }
+    },
+    "standard": {
+      "title": "Ambulance Victoria · official response targets in latest quarterly report, p. 1",
+      "url": "https://www.ambulance.vic.gov.au/sites/default/files/2026-11/2026-27-Q1-Ambulance-Response-Quarter-1-FY2026-27.pdf",
+      "format": "pdf",
+      "pages": [
+        1
+      ],
+      "markers": [
+        "within 15 minutes for 85% of incidents state-wide",
+        "within 15 minutes for 90% of incidents in centres with populations greater than 7,500",
+        "first AV resource arrives on scene"
+      ],
+      "finding": {
+        "en": "Ambulance Victoria targets a first response to Code 1 within 15 minutes for 85% statewide and 90% in centres above 7,500 residents. The clock runs from receipt of the 000 call to arrival of the first AV resource.",
+        "he": "יעד השירות לקריאות בדרגה 1 הוא הגעת המשאב הראשון בתוך 15 דקות ב־85% מהמקרים במדינה וב־90% במרכזים עם יותר מ־7,500 תושבים. המדידה מתחילה בקבלת שיחת 000."
+      },
+      "reviewed": "2026-11-18",
+      "jurisdiction": "Victoria, Australia",
+      "authority_type": "Published service performance target"
+    }
+  },
+  "verification": {
+    "annual": 19097,
+    "components": [
+      2907,
+      3228,
+      2955,
+      3034,
+      1546,
+      1712,
+      1818,
+      1897
+    ],
+    "days": 365,
+    "verified_on": "2026-11-18",
+    "source_sha256": {
+      "boundary": "2add64f6254a6dd915db5b0fe680c8ea2b102d8cf7222ec7d904a4e03082530a",
+      "workload": "48d2871e1fb5e4d82ac7e2187e7d92705a09aa69e5754f6c8cd10ac6f62da894",
+      "standard": "f259b201356c07cf75c7725a5a81cecb985d579290406e829a3686ceb4a24b31"
+    },
+    "raster_sources": [
+      "https://jrc-ghsl.s3.amazonaws.com/ghs-pop/r2023a/54009/100m/2020/GHS_POP_E2020_GLOBE_R2023A_54009_100_V1_0.tif",
+      "https://jrc-ghsl.s3.amazonaws.com/ghs-built-s-nres/r2023a/54009/100m/2020/GHS_BUILT_S_NRES_E2020_GLOBE_R2023A_54009_100_V1_0.tif"
+    ],
+    "raster_city_totals": [
+      179296.9381322514,
+      3451628.5
+    ]
+  },
+  "h3_resolution": 9,
+  "cells": 367,
+  "rows": 1101,
+  "time_assumption": {
+    "en": "No observed hourly city series is used. The same annual average hourly rate is used for all periods. Residents and non-residential built surface change each cell’s share across periods.",
+    "he": "אין במודל סדרת שיגורים עירונית לפי שעה. לכל התקופות משמש אותו ממוצע עירוני שנתי לשעה. האוכלוסייה והשטח הבנוי שאינו למגורים משנים את חלקו של כל משושה."
+  },
+  "grid_method": {
+    "en": "City polygons clip the H3 grid. The European Commission’s GHS-POP and non-residential GHS-BUILT-S, 2020 epoch, are sampled at four subpixels per 100 m pixel. Edge cells with no sampled exposure receive zero modeled demand.",
+    "he": "משושי H3 נחתכים בגבול העיר. נתוני האוכלוסייה והשטח הבנוי שאינו למגורים של הנציבות האירופית לשנת 2020 נדגמים בארבע נקודות לכל פיקסל של 100 מטר. למשושי שוליים ללא חשיפה שנדגמה משויך ביקוש אפס."
+  }
+}

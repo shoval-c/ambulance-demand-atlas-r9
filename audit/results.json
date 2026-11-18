@@ -6,7 +6,8 @@
     "new-york": 8338,
     "paris": 1230,
     "sioux-falls": 2226,
-    "tel-aviv": 523
+    "tel-aviv": 523,
+    "au-vic-24600": 367
   },
   "checks": [
     {
@@ -247,6 +248,48 @@
       "role": "timing",
       "status": "data_gap",
       "detail": "No observed local EMS time profile in this study."
+    },
+    {
+      "city": "au-vic-24600",
+      "role": "boundary",
+      "status": "passed",
+      "detail": "Matched a unique official feature.",
+      "checked_on": "2026-11-18"
+    },
+    {
+      "city": "au-vic-24600",
+      "role": "workload",
+      "status": "passed",
+      "detail": "Reproduced 19,097 in the study year.",
+      "checked_on": "2026-11-18"
+    },
+    {
+      "city": "au-vic-24600",
+      "role": "standard",
+      "status": "passed",
+      "detail": "Reviewed jurisdiction and service target. Matched evidence passages in the official document.",
+      "checked_on": "2026-11-18"
+    },
+    {
+      "city": "au-vic-24600",
+      "role": "residents",
+      "status": "passed",
+      "detail": "Sampled public GHSL population raster inside the boundary.",
+      "checked_on": "2026-11-18"
+    },
+    {
+      "city": "au-vic-24600",
+      "role": "activity",
+      "status": "passed",
+      "detail": "Sampled public GHSL non-residential raster inside the boundary.",
+      "checked_on": "2026-11-18"
+    },
+    {
+      "city": "au-vic-24600",
+      "role": "timing",
+      "status": "data_gap",
+      "detail": "No observed hourly city series is used. The same annual average hourly rate is used for all periods. Residents and non-residential built surface change each cell’s share across periods.",
+      "checked_on": "2026-11-18"
     }
   ]
 }
