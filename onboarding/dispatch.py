@@ -40,5 +40,5 @@ if __name__=='__main__':
     try:main()
     except NeedsResearch as e:
         print('Source review required:',str(e))
-        note('### Source review required\n'+str(e)+'\n\nFor a first-time jurisdiction, submit this same city to the [one-time research runner](../../blob/main/onboarding/RESEARCH.md). It researches primary sources and validates them before publishing.')
+        note('### Source review required\n'+str(e)+'\n\nFor a first-time jurisdiction, submit this same city to the [one-time research runner](https://github.com/shoval-c/ambulance-demand-atlas-r9/blob/main/onboarding/RESEARCH.md). It researches primary sources and validates them before publishing.')
         raise SystemExit(2)

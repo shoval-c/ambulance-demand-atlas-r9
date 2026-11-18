@@ -11,7 +11,7 @@ python onboarding/city.py --city "Municipality, region, country" --publish
 
 You may also capture a request in the [GitHub issue form](https://github.com/shoval-c/ambulance-demand-atlas-r9/issues/new?template=add-city.yml) and explicitly run `python onboarding/city.py --issue NUMBER --publish`. The issue form alone records the city without starting a job.
 
-Without `--publish` the builder fetches and verifies data in a temporary checkout. With it, a single non-forced commit updates navigation, the map, all city CSV downloads, the city comparison, and the source audit. The issue stays open until the deployed bytes match. Rerunning a successful city is idempotent. A competing push fails cleanly and can be retried against the latest main branch.
+Without `--publish` the builder fetches and verifies data in a temporary checkout. With it, a single non-forced commit updates navigation, the map, all city CSV downloads, the city comparison, and the source audit. For an issue-based run, the issue stays open until the deployed bytes match. Rerunning a successful city is idempotent. A competing push fails cleanly and can be retried against the latest main branch.
 
 ## Researching a new jurisdiction
 
@@ -25,4 +25,4 @@ The Victoria connector matches the named LGA to a single ABS 2025 boundary and b
 
 The map provides shared-crew planning estimates. A local response-time target alone cannot validate those estimates. For the initial six cities, the original published audit and model still apply. Each added city has a dated record under `audit/cities/` with source URLs, extracted numeric components, checksums, model assumptions and output counts.
 
-All added-city rechecks require `onboarding/requirements.txt`. Running `python audit/verify.py` also regenerates their full CSVs from public evidence and compares those bytes with the published CSVs.
+All added-city rechecks require `onboarding/requirements.txt`. Running `python audit/verify.py` also regenerates their full CSVs from public evidence and compares every field with the published CSVs. Identifiers, labels, ranks and crew counts must match exactly. Floating-point estimates allow a small cross-platform rounding tolerance; deployed downloads are checked byte for byte.
